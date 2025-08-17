@@ -50,21 +50,23 @@ console.log(calcSquareRoot(144)); //return 12
 // Maximum and Minimum Finder: From a given set of numbers, determine the largest and smallest values.
 function calcMaxAndMin (numbers) {
     return {
-        max: Math.max(numbers),
-        min: Math.min(numbers)
+        max: Math.max(...numbers),
+        min: Math.min(...numbers)
     };
 }
+console.log(calcMaxAndMin([3, 78, -12, 0.5, 27]));  //returns { max: 78, min: -12 }
 
-console.log(calcMaxAndMin(3, 78, -12, 0.5, 27)); //{ max: 3, min: 3 }
 
 // Random Number Generator: Generate a random integer within a specified range.
-//function getRandomNumber(min, max) {
-//    return Math.floor(Math.random() * (max - min + 1))
-//}
-
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+console.log(getRandomNumber(1, 50));  
 
 // Custom Rounding
 function customRounding(number, decimals) {
     return Number(number.toFixed(decimals));
 }
 console.log (customRounding(45.7898, 3)); //returns 45.79
+
+//create a calculator 
